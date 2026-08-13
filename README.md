@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jest Testing - The Jason Mraz Quiz
 
-## Getting Started
+This is a quiz application about Jason Mraz. Users enter their name to start the quiz, answer a few multiple choice questions, and receive a final score. At the end of the quiz, the user can also restart the quiz. The main purpose of this project is to practice writing tests in Jest.
 
-First, run the development server:
+### Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Name input before starting
+- Five multiple choice questions with three possible answers each
+- A progress indicator showing which question the user is answering
+- Score tracking that is displayed at the end of the quiz
+- Different messages based on the score and username
+- Option to play again
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Functionality
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+On page load, the user will see the title, instructions, and an input box. There is no start button.   
+<p align="center">
+  <img src="./public/001.png" alt="001" width="600">
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After the user starts typing, the start button will appear and the user can click Start to start the quiz.
+<p align="center">
+  <img src="./public/002.png" alt="002" width="600">
+</p>
 
-## Learn More
+After clicking Start, the user will see the first question with three answer options.
+<p align="center">
+  <img src="./public/003.png" alt="003" width="600">
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+After clicking an answer, the user will be taken to the next question. The progress indicator will also update to show which question the user is answering.
+<p align="center">
+  <img src="./public/004.png" alt="004" width="600">
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+There are currently a total of five questions. After answering the last question, the user will be taken to the results screen. They will see their final score, a message based on their score (0-2 / 3-4 / 5) along with their username. There is also a Play Again button that will take the user back to the first question.
+<p align="center">
+  <img src="./public/005.png" alt="005" width="600">
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
