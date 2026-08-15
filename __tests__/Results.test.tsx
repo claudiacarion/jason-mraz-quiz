@@ -43,7 +43,7 @@ describe("The Results component", () => {
         handleReset={mockHandleReset}
       />,
     );
-    const message = screen.getByText(/that was disappointing/i);
+    const message = screen.getByText(/mock username, that was disappointing./i);
     expect(message).toBeInTheDocument();
   });
   test("displays correct message for medium score (3-4)", () => {
@@ -57,7 +57,7 @@ describe("The Results component", () => {
         handleReset={mockHandleReset}
       />,
     );
-    const message = screen.getByText(/not too shabby/i);
+    const message = screen.getByText(/not too shabby, mock username./i);
     expect(message).toBeInTheDocument();
   });
   test("displays correct message for high score (5 or above)", () => {
@@ -71,7 +71,7 @@ describe("The Results component", () => {
         handleReset={mockHandleReset}
       />,
     );
-    const message = screen.getByText(/impressive/i);
+    const message = screen.getByText(/impressive, mock username!/i);
     expect(message).toBeInTheDocument();
   });
   test("displays a play again button", () => {
